@@ -6,6 +6,7 @@ UNDER_DEVELOPMENT <3
 
 # check for ApexVM CDN for installer (now using this)
 curl -fsSL https://code-server.dev/install.sh | sh
+# curl -fsSL https://apexvm.snares-gar.ts.net/cdn/files/install.sh | sh
 clear
 # setup ApexVM RunCode domain systems
 # sl u do it
