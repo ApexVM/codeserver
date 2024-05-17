@@ -73,4 +73,36 @@ You can also run servers like Nginx, Apache, Python webserver and others. If the
 ### Using desktop environments
 RunCode automatically installs XFCE4 on your instance. You can then use graphical apps like Chromium, CodeBlocks, VS Code (however RunCode is VS Code server itself) and even play games in web browser or keep your servers online in not heavy games (yes RunCode will run minecraft on 5 FPS)!
 
-To enable RunCode you have to flash some "modules" and reset RunCode config data. [I WILL FINISH LATER I ALMOST RAN OUT OF DATA]
+To enable RunCode you have to flash some "modules" and reset RunCode config data.
+
+To enable DEs support you have to flash an OS with pre-configured avm services. So simply: ask us. If you already have the system ready, run those commanda:
+```
+avmservice --start:de && sudo avm --startvnc && sudo avmservice --reload
+```
+This will re-load RunCode environment and start XFCE4 session. 
+
+To start web based VNC client, first add a module in **~/.avm/modules/novnc.avm** inside the file type:
+```
+VNC_DIR="YOUR_DIRECTORY_OF_NOVNC"
+VNCPORT="5901"
+WEBPORT="8080"
+
+$VNC_DIR/utils/proxy.py --vnc $PORT --port $WEBPORT
+```
+Next, edit RunCode config to use the module:
+```
+nano ~/.avm/runcode-avm.conf
+```
+Then add this line inside "#MODULES" section:
+```
+USE_MODULE novnc.avm TRUE
+```
+Then find line "EXECUTIONS" and add this line:
+```
+bash $MODULES/novnc.avm
+```
+As it is bash-able (all .avm files are bash files), you can start it with your start script or add it to avm.
+
+Then you can re-load your environment.
+
+**WARNING: enabling DEs support is in BETA stage! You can test the feature but it may not work correctly. Please report any issues on our discord server!**
