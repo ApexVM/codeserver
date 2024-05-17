@@ -69,3 +69,6 @@ Wait few seconds and you can now compile your apps!
 RunCode by default has pre-installed tools for running Docker containers and allowing you deploying Docker apps directly on RunCode instance! But, almost all of our instances **do not** support **KVM** which means you cannot run VMs (or they will run very slowly). 
 
 You can also run servers like Nginx, Apache, Python webserver and others. If the server isn't taking 50% of CPU then it's fine but if it does, we have the rights to terminate your VM.
+
+### Using desktop environments
+Woah calm down, okay? This may be okay but is illegal on RunCode systems. However you can "patch" avm to run DEs on your instance, check [Running DEs on RunCode instance](https://github.com/ApexVM/codeserver/tree/feat/de) .
