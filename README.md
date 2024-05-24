@@ -74,6 +74,6 @@ You can also run servers like Nginx, Apache, Python webserver and others. If the
 Woah calm down, okay? This may be okay but is illegal on RunCode systems. However you can "patch" avm to run DEs on your instance, check [Running DEs on RunCode instance](https://github.com/ApexVM/codeserver/tree/feat/de) .
 
 ### Using remote administration tools
-Using any tools that are designed to gain access to the computers are **FORBITTEN**. RunCode itself is SSH and VS Code server so why do you need another SSH client? Just start new terminal -_-
+Using any tools that are designed to gain access to the computers are **FORBIDDEN**. RunCode itself is SSH and VS Code server so why do you need another SSH client? Just start new terminal -_-
 
 If you want to use any remote control apps like anydesk or rustdesk, they are not allowed too unless they're offically supported on Apex VM's site. However RunCode supports noVNC :)
