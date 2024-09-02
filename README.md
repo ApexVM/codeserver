@@ -44,6 +44,8 @@ avm --forwad
 ```
 It will forwad port 8080 on port 8443 of your RunCode domain.
 
+***WARNING: This function has been removed in ApexOS 24.07, please use port forwading options in the VS Code***
+
 ### Running heavy apps
 By default, RunCode automatically detects apps that use 50% (or more) of CPU and terminates them allowing us to save resources. 
 
